@@ -1,0 +1,72 @@
+<html>
+<head>
+<script src="canchart.js"></script>
+<script>
+window.onload = function(){
+
+
+var startTimestamp = 0;
+var max_y=100;
+var max_x=500;
+var color = "green";
+var div ="cantest";
+var height = 200;
+var strokeBuffer = 1;
+var legend_x="Legend X";
+var legend_y="Legend Y";
+
+
+var alarmParams={};
+alarmParams.g_s=50;
+alarmParams.g_e=100;
+alarmParams.y_s=38;
+alarmParams.y_e=50;
+alarmParams.r_s=38;
+alarmParams.r_e=0;
+alarmParams.order="ryg";
+
+
+
+
+
+ cantest = new CanvasChart();
+ cantest.init("canTest", "cantest2" , height , startTimestamp, 1 , color, max_y, max_x,alarmParams,strokeBuffer);
+
+ cantest.scale(max_x,max_y,  legend_x , legend_y);
+
+
+var i=0;
+
+setInterval(draw,1);
+cantest.alert_x(75,"Ver","blue");
+cantest.alert_y(10,"Hori","red");
+function draw(){
+		
+
+
+	if(i<500){
+		cantest.add_point(i,50*Math.random());
+		i+=1;
+	}
+	else{
+		cantest.reset();
+		cantest.scale(max_x,max_y,  legend_x , legend_y);
+		i=0;
+
+	}
+}
+
+console.log(cantest.getAll());
+
+}
+</script>
+</head>
+<body>
+
+
+<div id="cantest2" width="200px;" height="200px;"></div>
+
+</body>
+</html>
+
+
