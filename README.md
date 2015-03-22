@@ -25,7 +25,6 @@ On the head section include the canchart.js file
 ##### Step 2 : JAVASCRIPT
 Initialize the chart with various parameters
 ```javascript
-
 window.onload = function(){
 
 //Parameters
@@ -40,11 +39,8 @@ var legend_x="Legend X"; //Name of the Horizontal Legend
 var legend_y="Legend Y"; //Name of the Vertical Legend
 
 /* Colored Band
-
-
 Use these to create a colored band behind the chart. This is optional, just pass a blank object in its place to remove this
 Ex:-  cantest.init("canTest", div , height , startTimestamp, 1 , color, max_y, max_x,{},strokeBuffer);
-
 */
 
 var alarmParams={};
@@ -56,19 +52,14 @@ alarmParams.r_s=38;
 alarmParams.r_e=0;
 alarmParams.order="ryg";
 
-
-
-
 //Create an Object of the class
  cantest = new CanvasChart();
 //Initialize the object
  cantest.init("canTest", div , height , startTimestamp, 1 , color, max_y, max_x,alarmParams,strokeBuffer);
 
-
 //The scale function draws the x and y axis.  
 
  cantest.scale(max_x,max_y,  legend_x , legend_y);
-
 
 
 //Draw a vertical alert marker
@@ -101,9 +92,6 @@ function draw(){
 //Returns a canvas with the snapshot of chart in PNG format
 
 var snapshot = cantest.snapshot();
-
-
-
 }
 
 ```
