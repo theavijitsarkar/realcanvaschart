@@ -110,8 +110,9 @@ var snapshot = cantest.snapshot();
 
 ### Thanks!!
 
-#####Author: Neeraj Nagi & Avijit Sarkar
 
 
-##### (http://www.avijitsarkar.com)
-##### (http://www.avifainfotech.com)
+
+#####Author: Avijit Sarkar & Neeraj Nagi
+###### http://www.avijitsarkar.com
+###### http://www.avifainfotech.com
